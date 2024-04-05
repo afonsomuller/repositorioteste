@@ -29,17 +29,22 @@ while acesso:
 
     if usuario == 2:
         confirma_senha = int(input("Por favor, digite sua senha.\n"))
-        if confirma_senha != senha:
-            while senha != confirma_senha:
+        while senha != confirma_senha:
+            if contador > 0:
                 print("Senha incorreta.", contador, "tentativas restantes.")
                 confirma_senha = int(input("Por favor, digite sua senha novamente.\n"))
+                if senha == confirma_senha:
+                    contador = 2
+                    pass
                 contador = contador - 1
-
-            if contador == 0:
-                print("Tentativas excedidas, tente novamente mais tarde.")
+            elif contador == 0:
                 break
+        if contador == 0:
+            print("Tentativas excedidas, tente novamente mais tarde.")
+            break
 
         elif confirma_senha == senha:
+            contador = 2
             menu2 = int(input("Seja bem-vindo, administrador!\n"
                               "O que deseja fazer?\n"
                               "Visualizar créditos - 1\n"
@@ -53,13 +58,3 @@ while acesso:
 
     if usuario == 3:
         acesso = False
-
-
-
-"""while senha != confirma_senha:
-    if contador > 0:
-        print(f'Senha inválida! Você tem {contador} tentativas restantes')
-        contador -= 1
-        confirma_senha = int(input('Digite sua Senha:/n'))
-    elif contador == 0:
-        break"""
