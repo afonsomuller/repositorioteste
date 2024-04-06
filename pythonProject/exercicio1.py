@@ -1,5 +1,5 @@
 senha = 1234
-saldo = 0
+saldo_atual = 0
 passagem = 1
 contador = 2
 acesso = True
@@ -10,24 +10,29 @@ while acesso:
                         "Usuário - 1\n"
                         "Administrador - 2\n"
                         "Sair - 3\n"))
+    if usuario < 1 or usuario >3:
+        print(f'Opção inválida. Tente novamente.')
     if usuario == 1:
         menu1 = int(input("Seja bem-vindo, usuário!\n"
                           "O que deseja fazer?\n"
                           "Recarregar cartão - 1\n"
                           "Usar cartão - 2\n"
                           "Voltar - 3\n"))
+        if menu1 < 1 or menu1 > 3:
+            print(f'Opção inválida. Tente novamente.')
         if menu1 == 1:
-            saldo = float(input("Quantos créditos gostaria de recarregar?\n"))
-            print(f"Novo saldo: {saldo:.2f} créditos\n")
+            saldo_recarga = float(input("Quantos créditos gostaria de recarregar?\n"))
+            saldo_atual += saldo_recarga
+            print(f"Novo saldo: {saldo_atual:.2f} créditos\n")
 
-        if menu1 == 2:
-            if saldo < passagem:
+        elif menu1 == 2:
+            if saldo_atual < passagem:
                 print("Você não possui saldo suficiente para essa transação\n")
             else:
-                print(f"Novo saldo {saldo - passagem} créditos.\n")
-                saldo = saldo - passagem
+                print(f"Novo saldo {saldo_atual - passagem} créditos.\n")
+                saldo_atual = saldo_atual - passagem
 
-    if usuario == 2:
+    elif usuario == 2:
         confirma_senha = int(input("Por favor, digite sua senha.\n"))
         while senha != confirma_senha:
             if contador > 0:
@@ -50,11 +55,13 @@ while acesso:
                               "Visualizar créditos - 1\n"
                               "Atualizar valor da passagem - 2\n"
                               "Voltar - 3\n"))
+            if menu2 < 1 or menu2 > 3:
+                print(f'Opção inválida. Tente novamente.')
             if menu2 == 1:
-                print(f"Você possui {saldo} créditos.\n")
+                print(f"Você possui {saldo_atual} créditos.\n")
 
-            if menu2 == 2:
+            elif menu2 == 2:
                 passagem = float(input("Qual o novo valor da passagem?\n"))
 
-    if usuario == 3:
+    elif usuario == 3:
         acesso = False
