@@ -1,17 +1,18 @@
 senha = 1234
 saldo_atual = 0
-passagem = 1
+passagem = 6
+passagem_reserva = 6
 contador = 2
 acesso = True
 confirma_senha = 0
+domingo = 'N'
+tarifa_domingo = passagem * 0.5
 while acesso:
     usuario = int(input("Qual é o seu cartão de acesso?\n"
                         "Usuário - 1\n"
                         "Administrador - 2\n"
                         "Sair - 3\n"))
     menu1, menu2 = True, True
-    if usuario < 1 or usuario >3:
-        print(f'Opção inválida. Tente novamente.')
     if usuario == 1:
         while menu1:
             menu1 = int(input("Seja bem-vindo, usuário!\n"
@@ -55,21 +56,58 @@ while acesso:
         elif confirma_senha == senha:
             contador = 2
             while menu2:
-                menu2 = int(input("Seja bem-vindo, administrador!\n"
-                                  "O que deseja fazer?\n"
-                                  "Visualizar créditos - 1\n"
-                                  "Atualizar valor da passagem - 2\n"
-                                  "Voltar - 3\n"))
-                if menu2 == 1:
-                    print(f"Você possui {saldo_atual} créditos.\n")
+                if domingo == 'N':
+                    menu2 = int(input("Seja bem-vindo, administrador!\n"
+                                      "O que deseja fazer?\n"
+                                      "Visualizar créditos - 1\n"
+                                      "Atualizar valor da passagem - 2\n"
+                                      "Definir Tarifa de Domingo - 3\n"
+                                      "Voltar - 4\n"))
+                    if menu2 == 1:
+                        print(f"O cartão possui {saldo_atual} créditos.\n")
 
-                elif menu2 == 2:
-                    passagem = float(input("Qual o novo valor da passagem?\n"))
-                elif menu2 == 3:
-                    menu2 = False
+                    elif menu2 == 2:
+                        passagem = float(input("Qual o novo valor da passagem?\n"))
+                        print(f'O valor da passagem foi definido para {passagem}')
+                        passagem_reserva = passagem
+                        tarifa_domingo = passagem * 0.5
+                        print(f'Se hoje fosse domingo, a passagem seria {tarifa_domingo}')
+                    elif menu2 == 3:
+                        domingo = 'S'
+                        passagem = tarifa_domingo
+                        pass
+                    elif menu2 == 4:
+                        menu2 = False
+                    else:
+                        print(f'Opção inválida. Tente novamente.')
+                        continue
                 else:
-                    print(f'Opção inválida. Tente novamente.')
-                    continue
-
+                    menu2 = int(input("Seja bem-vindo, administrador!\n"
+                                      "O que deseja fazer?\n"
+                                      "Visualizar créditos - 1\n"
+                                      "Atualizar valor da passagem - 2\n"
+                                      "Desativar Tarifa de Domingo - 3\n"
+                                      "Voltar - 4\n"))
+                    if menu2 == 1:
+                        print(f"O cartão possui {saldo_atual} créditos.\n")
+                    elif menu2 == 2:
+                        passagem = float(input("Qual o novo valor da passagem?\n"))
+                        print(f'O valor da passagem foi definido para {passagem}')
+                        passagem_reserva = passagem
+                        tarifa_domingo = passagem * 0.5
+                        passagem = tarifa_domingo
+                        print(f'Como hoje é domingo, a passagem será {passagem}')
+                    elif menu2 == 3:
+                        domingo = 'N'
+                        passagem = passagem_reserva
+                        pass
+                    elif menu2 == 4:
+                        menu2 = False
+                    else:
+                        print(f'Opção inválida. Tente novamente.')
+                        continue
     elif usuario == 3:
         acesso = False
+    else:
+        print('Opção Inválida. Tente novamente.')
+
