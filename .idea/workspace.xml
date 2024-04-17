@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b06002f1-84a5-43e5-8f33-12896ff5d301" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pythonProject/exercicio1.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject/exercicio1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject/PjBL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject/exercicio1.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject/PjBL1_grupo_afonso.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +32,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in repositorioteste.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PjBL.executor&quot;: &quot;Run&quot;,
-    &quot;Python.exercicio1.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in repositorioteste.executor": "Run",
+    "Python.PjBL.executor": "Run",
+    "Python.exercicio1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python.exercicio1">
+}]]></component>
+  <component name="RunManager" selected="Python.PjBL1_grupo_afonso">
     <configuration name="PjBL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="repositorioteste" />
       <option name="ENV_FILES" value="" />
@@ -61,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="exercicio1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PjBL1_grupo_afonso" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="repositorioteste" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pythonProject/exercicio1.py" />
+      <option name="SCRIPT_NAME" value="D:\Documentos\repositorioteste\pythonProject\PjBL1_grupo_afonso.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -100,7 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exercicio1" />
+        <item itemvalue="Python.PjBL1_grupo_afonso" />
         <item itemvalue="Python.PjBL" />
         <item itemvalue="Python tests.Python tests in repositorioteste" />
       </list>
