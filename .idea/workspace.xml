@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b06002f1-84a5-43e5-8f33-12896ff5d301" name="Changes" comment="" />
+    <list default="true" id="b06002f1-84a5-43e5-8f33-12896ff5d301" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject/PjBL1_grupo_afonso.py" beforeDir="false" afterPath="$PROJECT_DIR$/pythonProject/PjBL1_grupo_afonso.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +37,9 @@
     "Python.PjBL.executor": "Run",
     "Python.PjBL1_grupo_afonso.executor": "Run",
     "Python.exercicio1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RunManager" selected="Python.PjBL1_grupo_afonso">

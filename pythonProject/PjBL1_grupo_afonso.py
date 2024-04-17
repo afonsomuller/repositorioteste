@@ -45,13 +45,11 @@ while acesso == True:
                 confirma_senha = int(input('Por favor, digite sua senha novamente.\n'))
                 if senha == confirma_senha:
                     contador = 2
-                    continue
                 contador = contador - 1
             elif contador == 0:
+                print('Tentativas excedidas, tente novamente mais tarde.\n')
                 break
-        if contador == 0:
-            print('Tentativas excedidas, tente novamente mais tarde.\n')
-        elif confirma_senha == senha:
+        if confirma_senha == senha:
             contador = 2
             while menu2 == True:
                 menu_adm = int(input('Seja bem-vindo, administrador!\n'
