@@ -34,8 +34,8 @@ else:
     else:
         print('Número Inválido')
         
-numero = 0
-for count in range(0,5):
+numero = int(input('Digite um valor: \n'))
+for count in range(0,4):
     numero_digitado = int(input('Digite um valor: \n'))
     if numero_digitado > numero:
         numero = numero_digitado
@@ -46,6 +46,9 @@ print(f'O maior valor digitado foi {numero}')"""
 massa = float(input('Digite a Massa do objeto: \n'))
 tempo = 50
 tempo_decorrido = 0
+while massa < 0.5:
+    print('Valor inválido! Tente novamente')
+    massa = float(input('Digite a Massa do objeto: \n'))
 while massa > 0.5:
     tempo_decorrido += tempo
     massa /= 2
