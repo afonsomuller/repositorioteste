@@ -21,4 +21,12 @@ for alunos in range(len(matriz_geral)):
     for notas in range(0,2):
         for notas2 in range(0,3):
             soma = soma + matriz_geral[alunos][1][notas2]
-        media.append(media = soma / len(matriz_geral[alunos][1]))
+        media_notas = soma / len(matriz_geral[alunos][1])
+        media.append(media_notas)
+        matriz_media[alunos].append(media[:])
+        media.clear()
+        soma = 0
+print(matriz_media)
+for aluno in range(len(matriz_media)):
+    for nota in range(0,3):
+        print(matriz_media[aluno][nota])
