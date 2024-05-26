@@ -1,32 +1,16 @@
-matriz_geral = []
-matriz_media = []
-cont_aluno = 1
-while True:
-    matriz_alunos = []
-    matriz_alunos.append(f'Aluno {cont_aluno}')
-    cont_aluno += 1
-    matriz_geral.append(matriz_alunos[:])
-    matriz_media.append(matriz_alunos[:])
-    if cont_aluno == 5:
-        break
-for alunos in range(len(matriz_geral)):
-    lista_notas = []
-    for notas in range(1,4):
-        lista_notas.append(float(input(f'Digite a {notas} nota do {alunos+1}º aluno: ')))
-    matriz_geral[alunos].append(lista_notas[:])
-print(matriz_geral)
-for alunos in range(len(matriz_geral)):
-    media = []
-    soma = 0
-    for notas in range(0,2):
-        for notas2 in range(0,3):
-            soma = soma + matriz_geral[alunos][1][notas2]
-        media_notas = soma / len(matriz_geral[alunos][1])
-        media.append(media_notas)
-        matriz_media[alunos].append(media[:])
-        media.clear()
-        soma = 0
-print(matriz_media)
-for aluno in range(len(matriz_media)):
-    for nota in range(0,3):
-        print(matriz_media[aluno][nota])
+from random import shuffle
+lista_alfanum = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+                 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+shuffle(lista_alfanum)
+captcha_lista = []
+for caracter in range(0,6):
+    captcha_lista.append(lista_alfanum[caracter])
+captcha = ''.join(captcha_lista)
+print(captcha)
+print('Digite abaixo o mesmo que você ve no captcha:')
+compara_captcha = str(input(''))
+if compara_captcha == captcha:
+    print('Tudo Certo, pode navegar!')
+else:
+    print('Vai aonde, robô?')
